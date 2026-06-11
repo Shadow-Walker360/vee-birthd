@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Veronica Karimi | 21st Birthday Experience</title>
+<title>Veronica Karimi | 22nd Birthday Experience</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -373,7 +373,7 @@ footer .ft-mono{font-family:'Space Mono',monospace;font-size:.62rem;letter-spaci
     <div class="video-overlay"></div>
     <div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div>
     <div class="hero-content">
-      <div class="hero-eyebrow">&mdash; Happy 21st Birthday &mdash;</div>
+      <div class="hero-eyebrow">&mdash; Happy 22nd Birthday &mdash;</div>
       <h1 class="hero-name"><span class="it">Veronica</span><br>Karimi</h1>
       <div class="hero-age">Born &middot; May 27, 2004</div>
       <p class="hero-tagline">She debugs at midnight, ships by morning,<br>and walks into every room like she owns the repo.</p>
@@ -398,7 +398,7 @@ footer .ft-mono{font-family:'Space Mono',monospace;font-size:.62rem;letter-spaci
     <div class="prod-card"><span>A Birthday Original Production</span></div>
     <div class="episode-tag">
       <div class="ep-label">Episode</div>
-      <div class="ep-num">21</div>
+      <div class="ep-num">22</div>
     </div>
     <div class="chapter-count">
       <div class="ch-num">Chapter 01 &middot; The Legend</div>
@@ -409,10 +409,10 @@ footer .ft-mono{font-family:'Space Mono',monospace;font-size:.62rem;letter-spaci
       <div class="series-pre">The Veronica Karimi Story</div>
       <div class="series-main">
         <span class="series-main-line sml1">VERONICA</span>
-        <span class="series-main-line sml2"><em>at</em> Twenty-One</span>
+        <span class="series-main-line sml2"><em>at</em> Twenty-Two</span>
       </div>
       <div class="series-underline"></div>
-      <div class="series-tagline">Season 21 &middot; Now Streaming</div>
+      <div class="series-tagline">Season 22 &middot; Now Streaming</div>
     </div>
     <div class="cast-row">
       <div class="cast-item"><div class="cast-role">Starring</div><div class="cast-name">Veronica Karimi</div></div>
@@ -421,7 +421,7 @@ footer .ft-mono{font-family:'Space Mono',monospace;font-size:.62rem;letter-spaci
       <div class="cast-sep"></div>
       <div class="cast-item"><div class="cast-role">Specialty</div><div class="cast-name">Ships at 3 AM</div></div>
       <div class="cast-sep"></div>
-      <div class="cast-item"><div class="cast-role">Current Arc</div><div class="cast-name">Turning 21 &#127874;</div></div>
+      <div class="cast-item"><div class="cast-role">Current Arc</div><div class="cast-name">Turning 22 &#127874;</div></div>
     </div>
     <div class="intro-meta">
       <div class="meta-left">
@@ -429,8 +429,8 @@ footer .ft-mono{font-family:'Space Mono',monospace;font-size:.62rem;letter-spaci
         <div class="ml-date">May 27, 2004</div>
       </div>
       <div class="meta-right">
-        <span class="mr-badge">&#128308; Live &middot; Season 21</span>
-        <span class="mr-runtime">Runtime &middot; 21 Years &amp; counting</span>
+        <span class="mr-badge">&#128308; Live &middot; Season 22</span>
+        <span class="mr-runtime">Runtime &middot; 22 Years &amp; counting</span>
       </div>
     </div>
     <div class="intro-cta-wrap">
@@ -582,7 +582,7 @@ footer .ft-mono{font-family:'Space Mono',monospace;font-size:.62rem;letter-spaci
   </section>
   <section class="letter-section" style="padding:80px 6% 100px">
     <div class="letter-wrap">
-      <span class="big-number">21</span>
+      <span class="big-number">22</span>
       <div class="letter-body">
         <p>Twenty-one years ago, the world got a little more brilliant.<br>A little more <strong>curious</strong>. A little more <strong>extraordinary</strong>.</p>
         <br>
@@ -756,18 +756,14 @@ setInterval(()=>{
 const fd=document.getElementById('film-strip-deco');
 if(fd){for(let i=0;i<40;i++){const h=document.createElement('div');h.className='film-hole';fd.appendChild(h);}}
 /* GALLERY ENGINE */
-const PHOTOS=[
-  {src:'photo1.jpeg',title:'Golden Aura',sub:'Forever in the frame'},
-  {src:'photo2.jpeg',title:'Her Energy',sub:'Unbothered & glowing'},
-  {src:'photo3.jpeg',title:'Soft Power',sub:'She chose peace & beauty'},
-  {src:'photo4.jpeg',title:'Main Character',sub:'The plot revolves around her'},
-  {src:'photo5.jpeg',title:'Unforgettable',sub:'One of a kind, always'},
-  {src:'photo6.jpeg',title:'Pure Joy',sub:'Smiling from the soul'},
-  {src:'photo7.jpeg',title:'That Glow',sub:'Effortlessly her'},
-  {src:'photo8.jpeg',title:'21 & Iconic',sub:'Born for this moment'},
-  {src:'photo9.jpeg',title:'Sweet & Bold',sub:'A rare kind of beautiful'},
-  {src:'photo10.jpeg',title:'To Infinity',sub:'The best is yet to come'},
-];
+const PHOTOS = Array.from(
+  { length: 150 },
+  (_, i) => ({
+    src: `photo${i + 1}.jpeg`,
+    title: `Memory ${i + 1}`,
+    sub: 'Vee • 22'
+  })
+);
 const MODES_NAMES=['Cinematic','Strip','Ken Burns','Triptych'];
 const SLIDES_PER_MODE=3;
 let galIdx=0,modeIdx=0,modeSlideCount=0,galTimer=null,galInited=false;
@@ -805,9 +801,7 @@ document.addEventListener('keydown',e=>{
   if(e.key==='ArrowRight') openLB((lbIdx+1)%PHOTOS.length);
   if(e.key==='ArrowLeft') openLB((lbIdx-1+PHOTOS.length)%PHOTOS.length);
 });
-const UNSPLASH=['photo-1529626455594-4ff0802cfb7e','photo-1524504388940-b1c1722653e1','photo-1508214751196-bcfd4ca60f91','photo-1531746020798-e6953c6e8e04','photo-1488716820095-cbe80883c496','photo-1534528741775-53994a69daeb','photo-1517841905240-472988babdf9','photo-1522093007474-d86e9bf7ba6f','photo-1496440737103-cd596325d314','photo-1502823403499-6ccfcf4fb453'];
-function fallback(i){return'https://images.unsplash.com/'+UNSPLASH[i%UNSPLASH.length]+'?w=700&q=80';}
-function mkImg(p,i){const img=document.createElement('img');img.src=p.src;img.alt=p.title;img.onerror=()=>{img.src=fallback(i);};return img;}
+
 galTotal.textContent=PHOTOS.length;
 PHOTOS.forEach((_,i)=>{
   const d=document.createElement('span');if(i===0)d.classList.add('active');
